@@ -10,5 +10,116 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  */
 function CalcularPrecio () 
 {
- 	
+    let marca = document.getElementById("Marca").value;
+	let cantidad = document.getElementById("txtIdCantidad").value;
+	let precio = 35;
+	let descuento;
+	let precioFinal;
+	let impuesto;
+
+
+	precio = parseInt(precio);
+	descuento = parseInt(descuento);
+	precioFinal = parseInt(precioFinal);
+	impuesto = parseInt(impuesto);
+	cantidad = parseInt(cantidad);
+
+ 	switch(cantidad)
+ 	{
+ 		case 6:
+ 		descuento = precio * 50/100;
+ 		precioFinal = cantidad * precio - descuento;
+ 		document.getElementById("txtIdprecioDescuento").value = precioFinal;
+ 		if(precioFinal >= 120)
+ 		{
+ 			impuesto = precioFinal * 10/100;
+ 			precioFinal= impuesto + precioFinal;
+ 			alert("el precio final con impuesto es: "+ precioFinal + " y el impuesto agregado es de: " + impuesto );
+ 		}
+ 		break;
+
+ 		case 5:
+
+ 		if (marca == "ArgentinaLuz") 
+ 		{
+ 			descuento = precio * 40/100;
+ 			precioFinal = cantidad * precio - descuento;
+
+ 			document.getElementById("txtIdprecioDescuento").value = precioFinal;
+ 			
+ 		}
+ 		else
+ 		{
+ 			descuento = precio * 30/100;
+ 			precioFinal = cantidad * precio - descuento;
+ 			document.getElementById("txtIdprecioDescuento").value = precioFinal;
+
+ 		}
+
+ 		if(precioFinal >= 120)
+ 		{
+ 			impuesto = precioFinal * 10/100;
+ 			precioFinal= impuesto + precioFinal;
+ 			alert("el precio final con impuesto es: "+ precioFinal + " y el impuesto agregado es de: " + impuesto );
+ 		}
+
+ 		break;
+
+ 		case 4:
+ 		if (marca == "ArgentinaLuz" || marca == "FelipeLamparas")
+ 		{
+ 			descuento = precio * 25/100;
+ 			precioFinal = cantidad * precio - descuento;
+ 			document.getElementById("txtIdprecioDescuento").value = precioFinal;
+ 			
+ 		}
+ 		else 
+ 		{
+ 			descuento = precio * 20/100;
+ 			precioFinal = cantidad * precio - descuento;
+ 			document.getElementById("txtIdprecioDescuento").value = precioFinal;
+
+ 		}
+
+ 		if(precioFinal >= 120)
+ 		{
+ 			impuesto = precioFinal * 10/100;
+ 			precioFinal= impuesto + precioFinal;
+ 			alert("el precio final con impuesto es: "+ precioFinal + " y el impuesto agregado es de: " + impuesto );
+ 		}
+
+ 		break;
+
+ 		case 3:
+ 		if (marca == "ArgentinaLuz" )
+ 		{
+ 			descuento = precio * 15/100;
+ 			precioFinal = cantidad * precio - descuento;
+ 			document.getElementById("txtIdprecioDescuento").value = precioFinal;
+ 		}
+ 		else if(marca == "FelipeLamparas")
+ 		{
+ 			descuento = precio * 10/100;
+ 			precioFinal = cantidad * precio - descuento;
+ 			document.getElementById("txtIdprecioDescuento").value = precioFinal;
+
+ 		}
+ 		else
+ 		{
+ 			descuento = precio * 5/100;
+ 			precioFinal = cantidad * precio - descuento;
+ 			document.getElementById("txtIdprecioDescuento").value = precioFinal;
+ 		}
+
+ 		if(precioFinal >= 120)
+ 		{
+ 			impuesto = precioFinal * 10/100;
+ 			precioFinal= impuesto + precioFinal;
+ 			alert("el precio final con impuesto es: "+ precioFinal + " y el impuesto agregado es de: " + impuesto );
+ 		}
+ 		break;
+
+
+ 		
+ 	}
 }
